@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <!--课程分类-->
+    <LinearLayout
+        android:id="@+id/ll_class"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_class"
+            android:layout_width="110dp"
+            android:layout_height="125dp"
+            android:layout_margin="@dimen/default_margin"
+            android:scaleType="centerCrop"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_class_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="合格的设计师应该掌握哪些专业知识"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_class_expert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_6"
+                android:text="屈凡军/建众互联网总经理"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/tv_class_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_6"
+                android:text="总时长：360分钟"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/text_size_14" />
+
+            <com.jianzhong.lyag.flexboxlayout.TagFlowLayout
+                android:id="@+id/tag_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_6" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已有"
+                    android:textColor="@color/color_888888"
+                    android:textSize="@dimen/text_size_14"/>
+
+                <TextView
+                    android:id="@+id/tv_class_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/color_888888"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="人观看"
+                    android:textColor="@color/color_888888"
+                    android:textSize="@dimen/text_size_14"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--专栏分类-->
+    <LinearLayout
+        android:id="@+id/ll_special"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_special"
+            android:layout_width="110dp"
+            android:layout_height="125dp"
+            android:layout_margin="@dimen/default_margin"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:id="@+id/ll_tag"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_special_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text=""
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_special_explain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_6"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="专栏说明专栏说明"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_14"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_special_identify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_6"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="讲师/讲师职务"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin_6"
+                    android:background="@drawable/shape_item_theme_white_5"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_special_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_margin_4"
+                        android:layout_marginTop="@dimen/default_margin_4"
+                        android:layout_marginLeft="@dimen/default_margin_6"
+                        android:layout_marginRight="@dimen/default_margin_6"
+                        android:text="更新至第五讲"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textColor="@color/color_theme"
+                        android:textSize="@dimen/text_size_12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_margin_8"
+                    android:layout_marginTop="@dimen/default_margin_6"
+                    android:background="@drawable/shape_item_theme_white_5"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_special_update_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_margin_4"
+                        android:layout_marginTop="@dimen/default_margin_4"
+                        android:layout_marginLeft="@dimen/default_margin_6"
+                        android:layout_marginRight="@dimen/default_margin_6"
+                        android:text="更新至第五讲"
+                        android:textColor="@color/color_theme"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/text_size_12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
+
+            <TextView
+                android:id="@+id/tv_special_subscribe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_6"
+                android:text="已有1000人订阅"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/text_size_14"
+                android:layout_gravity="bottom"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--音频分类-->
+    <LinearLayout
+        android:id="@+id/ll_dry_cargo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_16"
+            android:src="@drawable/homepage_play" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_dry_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="运营音频：企业经营人的智慧"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_dry_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="今天 "
+                    android:textColor="@color/color_888888"
+                    android:textSize="@dimen/text_size_14"
+                    android:layout_marginRight="@dimen/default_margin_8"/>
+
+                <View
+                    style="@style/GreyDivPortrait"
+                    android:layout_marginTop="@dimen/default_margin_2"
+                    android:layout_marginBottom="@dimen/default_margin_2"/>
+
+                <TextView
+                    android:id="@+id/tv_dry_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="时长：01:32"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/color_888888"
+                    android:layout_marginLeft="@dimen/default_margin_8"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="1dp"/>
+
+                <TextView
+                    android:id="@+id/tv_dry_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/nrdh_share"
+                    android:drawablePadding="@dimen/default_margin_4"
+                    android:text="分享"
+                    android:textColor="@color/color_888888"
+                    android:textSize="@dimen/text_size_14"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--音频分类-->
+
+    <!--直播分类-->
+    <LinearLayout
+        android:id="@+id/ll_live"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_live"
+                android:layout_width="110dp"
+                android:layout_height="125dp"
+                android:layout_margin="@dimen/default_margin"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/iv_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/iv_live"
+                android:layout_alignLeft="@+id/iv_live"
+                android:layout_alignStart="@+id/iv_live"
+                android:layout_marginLeft="14dp"
+                android:layout_marginStart="14dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_live_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="第13期：像诺维家商学院一样拥有百万粉丝"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_live_expert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_6"
+                android:text="屈凡军/建众互联网总经理"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/tv_live_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_6"
+                android:text=""
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/text_size_14" />
+
+
+            <View
+                android:layout_width="1dp"
+                android:layout_weight="1"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0人在线观看"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

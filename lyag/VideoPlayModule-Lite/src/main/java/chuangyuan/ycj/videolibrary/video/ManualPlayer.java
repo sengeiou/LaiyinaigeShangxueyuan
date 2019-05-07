@@ -1,0 +1,190 @@
+package chuangyuan.ycj.videolibrary.video;
+
+import android.app.Activity;
+import android.os.Build;
+import android.support.annotation.IdRes;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+
+import com.google.android.exoplayer2.util.Util;
+
+import java.util.WeakHashMap;
+
+import chuangyuan.ycj.videolibrary.listener.DataSourceListener;
+import chuangyuan.ycj.videolibrary.widget.VideoPlayerView;
+
+/**
+ * author yangc
+ * date 2017/2/27
+ * E-Mail:1007181167@qq.com
+ * Description： 手动控制播放播放器
+ */
+public final class ManualPlayer extends GestureVideoPlayer {
+    /**
+     * 记录视频进度缓存map
+     **/
+    private static WeakHashMap<Integer, Long> tags = new WeakHashMap<>();
+    /**
+     * 记录视频当前窗口缓存map
+     **/
+    private static WeakHashMap<Integer, Integer> tags2 = new WeakHashMap<>();
+    private int position;
+
+    /**
+     * Instantiates a new Manual player.
+     *
+     * @param activity the activity
+     * @param reId     the re id
+     */
+    public ManualPlayer(@NonNull Activity activity, @IdRes int reId) {
+        this(activity, reId, null);
+    }
+
+    /**
+     * Instantiates a new Manual player.
+     *
+     * @param activity   the activity
+     * @param playerView the player view
+     */
+    public ManualPlayer(@NonNull Activity activity, @NonNull VideoPlayerView playerView) {
+        this(activity, playerView, null);
+    }
+
+    /**
+     * Instantiates a new Manual player.
+     *
+     * @param activity the activity
+     * @param reId     the re id
+     * @param listener the listener
+     */
+    public ManualPlayer(@NonNull Activity activity, @IdRes int reId, @Nullable DataSourceListener listener) {
+        this(activity, (VideoPlayerView) activity.findViewById(reId), listener);
+    }
+
+    /**
+     * Instantiates a new Manual player.
+     *
+     * @param activity   the activity
+     * @param playerView the player view
+     * @param listener   the listener
+     */
+    public ManualPlayer(@NonNull Activity activity, @NonNull VideoPlayerView playerView, @Nullable DataSourceListener listener) {
+        super(activity, playerView, listener);
+        getPlayerViewListener().setControllerHideOnTouch(false);
+        getPlayerViewListener().setPlayerBtnOnTouch(true);
+    }
+
+    /**
+     * Instantiates a new Manual player.
+     *
+     * @param activity           the activity
+     * @param mediaSourceBuilder the media source builder
+     * @param playerView         the player view
+     */
+    public ManualPlayer(@NonNull Activity activity, @NonNull MediaSourceBuilder mediaSourceBuilder, @NonNull VideoPlayerView playerView) {
+        super(activity, mediaSourceBuilder, playerView);
+        getPlayerViewListener().setControllerHideOnTouch(false);
+        getPlayerViewListener().setPlayerBtnOnTouch(true);
+    }
+
+    /***
+     * 启动播放视频
+     * */
+    @Override
+    public void startPlayer() {
+        if (getPlayerViewListener().isList()) {
+            handPause = false;
+            VideoPlayerManager.getInstance().setCurrentVideoPlayer(ManualPlayer.this);
+            if (tags.get(position) != null && tags2.get(position) != null) {
+                int positions = tags.get(position).intValue();
+                int index = tags2.get(position);
+                setPosition(index, positions);
+                tags.remove(position);
+                tags2.remove(position);
+            }
+        }
+        getPlayerViewListener().setPlayerBtnOnTouch(false);
+        createPlayers();
+        registerReceiverNet();
+    }
+
+    @Override
+    public void onResume() {
+        boolean is = (Util.SDK_INT <= Build.VERSION_CODES.M || player == null) && isLoad;
+        if (is) {
+            if (getPlayerViewListener().isList()) {
+                getPlayerViewListener().setPlayerBtnOnTouch(true);
+            } else {
+                createPlayers();
+            }
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    /**
+     * 列表暂停
+     *
+     * @param reset 是否重置的 true  重置 false
+     */
+    void onListPause(boolean reset) {
+        if (reset) {
+            isPause = true;
+            if (player != null) {
+                handPause = !player.getPlayWhenReady();
+                reset(false);
+            }
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        tags.clear();
+        tags2.clear();
+    }
+    /**
+     * 重置
+     *
+     * @param s s
+     */
+    public void reset(boolean s) {
+        if (player != null) {
+            unNetworkBroadcastReceiver();
+            if (!s) {
+                setPosition(0);
+            } else {
+                tags.put(position, player.getCurrentPosition());
+                tags2.put(position, player.getCurrentWindowIndex());
+            }
+            player.stop();
+            player.removeListener(componentListener);
+            getPlayerViewListener().setPlayerBtnOnTouch(true);
+            getPlayerViewListener().reset();
+            player.release();
+            if (mediaSourceBuilder != null) {
+                mediaSourceBuilder.release();
+            }
+            player = null;
+        }
+    }
+
+    /***
+     * 重置点击事件
+     * **/
+    public void resetInit() {
+        getPlayerViewListener().setPlayerBtnOnTouch(true);
+        getPlayerViewListener().reset();
+    }
+
+    /****
+     * 设置tag 标记 防止列表复用进度导致,
+     * @param position  position
+     * **/
+    public void setTag(int position) {
+        this.position = position;
+    }
+}

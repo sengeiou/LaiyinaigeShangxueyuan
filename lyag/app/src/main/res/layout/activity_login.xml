@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_item"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/register_bgp"
+              android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="96dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/register_logo"
+        />
+
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_marginLeft="@dimen/login_item_margin"
+        android:layout_marginRight="@dimen/login_item_margin"
+        android:layout_marginTop="@dimen/login_item_margin"
+        android:background="@drawable/shape_item_theme_white_16"
+        android:drawableLeft="@drawable/register_user"
+        android:drawablePadding="@dimen/default_margin_8"
+        android:gravity="center_vertical"
+        android:hint="请输入手机号码"
+        android:inputType="phone"
+        android:paddingLeft="@dimen/default_margin"
+        android:paddingRight="@dimen/default_margin"
+        android:textSize="@dimen/text_size_14"/>
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_marginLeft="@dimen/login_item_margin"
+        android:layout_marginRight="@dimen/login_item_margin"
+        android:layout_marginTop="@dimen/default_margin_16"
+        android:background="@drawable/shape_item_theme_white_16"
+        android:drawableLeft="@drawable/register_lock"
+        android:drawablePadding="@dimen/default_margin_8"
+        android:gravity="center_vertical"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:paddingLeft="@dimen/default_margin"
+        android:paddingRight="@dimen/default_margin"
+        android:textSize="@dimen/text_size_14"
+        android:maxLength="16"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_forget_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/login_item_margin"
+        android:layout_marginTop="@dimen/default_margin_20"
+        android:gravity="right"
+        android:paddingRight="@dimen/default_margin"
+        android:text="忘记密码？"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/text_size_12"
+        />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/login_item_height"
+        android:background="@drawable/shape_item_theme_16"
+        android:text="登录"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/text_size_14"
+        />
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/login_item_margin"
+        android:text="建众互联网公司技术支持"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/text_size_12"
+        />
+</LinearLayout>

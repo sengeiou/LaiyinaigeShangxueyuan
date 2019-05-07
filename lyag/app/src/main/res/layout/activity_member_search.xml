@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_bg"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_7B6DFF"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/default_margin_8"
+        android:paddingLeft="@dimen/default_margin"
+        android:paddingRight="@dimen/default_margin"
+        android:paddingTop="@dimen/default_margin_8">
+
+        <EditText
+            android:id="@+id/et_search"
+            style="@style/CommentEditTextSearch"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:hint="请输入搜索姓名"
+            android:imeOptions="actionSearch"/>
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:text="取消"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_size_14"/>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/item_height"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_ptr_recycler_view"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <View
+                style="@style/GreyDivider"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_range"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="已选择："
+                    android:textColor="@color/color_theme"
+                    android:textSize="@dimen/text_size_14"/>
+
+
+                <Button
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="48dp"
+                    android:layout_height="28dp"
+                    android:layout_marginRight="@dimen/default_margin"
+                    android:background="@drawable/shape_item_theme_5"
+                    android:text="确定"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/text_size_13"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>

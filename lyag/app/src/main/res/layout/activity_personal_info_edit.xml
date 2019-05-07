@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_personal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:text="头像"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_subtitle_size"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="@dimen/default_margin"
+                    android:layout_marginLeft="@dimen/default_margin_20"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_default_user"
+                    app:civ_border_color="@color/color_cccccc"
+                    app:civ_border_width="1dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginRight="@dimen/default_margin"
+                    android:src="@drawable/mine_more" />
+
+            </LinearLayout>
+
+            <View style="@style/GreyDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+
+                <View style="@style/GreyDivider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/default_margin"
+                        android:layout_weight="1"
+                        android:text="姓名"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/text_subtitle_size"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:text=""
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/text_subtitle_size" />
+                </LinearLayout>
+
+                <View
+                    style="@style/GreyDivider"
+                    android:layout_marginLeft="@dimen/default_margin" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/default_margin"
+                        android:layout_weight="1"
+                        android:text="职位"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/text_subtitle_size"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/tv_job"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:text=""
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/text_subtitle_size" />
+                </LinearLayout>
+
+                <View style="@style/GreyDivider" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:background="@color/color_white"
+                android:orientation="vertical">
+
+                <View style="@style/GreyDivider" />
+
+                <LinearLayout
+                    android:id="@+id/ll_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/default_margin"
+                        android:layout_weight="1"
+                        android:text="性别"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/text_subtitle_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:drawablePadding="@dimen/default_margin_8"
+                        android:drawableRight="@drawable/mine_more"
+                        android:text="未知"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/text_subtitle_size" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/GreyDivider"
+                    android:layout_marginLeft="@dimen/default_margin" />
+
+                <LinearLayout
+                    android:id="@+id/ll_birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/default_margin"
+                        android:layout_weight="1"
+                        android:text="出生年月"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/text_subtitle_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_birthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:drawablePadding="@dimen/default_margin_8"
+                        android:drawableRight="@drawable/mine_more"
+                        android:text="点击设置"
+                        android:textColor="@color/color_b2b2b2"
+                        android:textSize="@dimen/text_subtitle_size" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/GreyDivider"
+                    android:layout_marginLeft="@dimen/default_margin" />
+
+                <LinearLayout
+                    android:id="@+id/ll_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/default_margin"
+                        android:layout_weight="1"
+                        android:text="所在地"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/text_subtitle_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:drawablePadding="@dimen/default_margin_8"
+                        android:drawableRight="@drawable/mine_more"
+                        android:text="点击设置"
+                        android:textColor="@color/color_b2b2b2"
+                        android:textSize="@dimen/text_subtitle_size" />
+
+                </LinearLayout>
+
+                <View style="@style/GreyDivider" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

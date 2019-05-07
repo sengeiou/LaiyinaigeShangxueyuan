@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_my_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我的排名"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_14"
+        android:layout_margin="@dimen/default_margin"/>
+
+    <LinearLayout
+        android:id="@+id/ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:background="@drawable/shape_rank_white"
+            android:paddingBottom="@dimen/default_margin_4"
+            android:paddingLeft="@dimen/default_margin_10"
+            android:paddingRight="@dimen/default_margin_10"
+            android:paddingTop="@dimen/default_margin_4"
+            android:text="1"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="@dimen/default_margin"
+            android:src="@drawable/icon_default_user" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/color_theme"
+            android:textSize="@dimen/text_size_15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/default_margin"
+            android:text="学分"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="排行榜"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_14"
+        android:layout_margin="@dimen/default_margin"/>
+
+</LinearLayout>

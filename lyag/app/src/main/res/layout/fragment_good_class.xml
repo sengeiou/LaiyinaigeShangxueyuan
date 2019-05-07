@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.baselib.widget.CustomGridView
+        android:id="@+id/gv_good_class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_margin_4"
+        android:layout_marginRight="@dimen/default_margin_4"
+        android:layout_marginTop="@dimen/default_margin"
+        android:divider="@color/color_grey_divider"
+        android:dividerHeight="@dimen/default_divider_one"
+        android:horizontalSpacing="@dimen/default_margin"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/default_margin" />
+</LinearLayout>

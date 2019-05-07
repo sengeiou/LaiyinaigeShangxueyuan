@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    android:id="@+id/ll_item">
+
+    <RelativeLayout
+        android:id="@+id/rl_live_class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:clickable="false"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/iv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:focusable="false"
+            android:scaleType="centerCrop"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/iv_desc"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/black_alpha">
+
+            <TextView
+                android:id="@+id/tv_identity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/default_margin_6"
+                android:text=""
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_home_size" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_desc"
+            android:layout_marginTop="@dimen/default_margin_4"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin_4"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/default_margin_4">
+
+        <TextView
+            android:id="@+id/tv_study"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="已有1001人学习"
+            android:textColor="@color/color_888888"
+            android:textSize="@dimen/text_home_size" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="188"
+            android:textColor="@color/color_theme"
+            android:textSize="@dimen/text_home_size"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/color_white">
+
+    <FrameLayout
+        android:id="@+id/layout_adv"
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_banners"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <com.jianzhong.lyag.widget.customview.MyViewPagerIndicator
+                android:id="@+id/vp_viewpagerindicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="12dp"
+                android:layout_marginRight="8dp"
+                android:gravity="right"/>
+
+            <TextView
+                android:id="@+id/tv_adv"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/black_alpha"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="13dp"
+                android:text=""
+                android:textColor="@color/color_white"
+                android:textSize="14sp"
+                android:visibility="visible"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

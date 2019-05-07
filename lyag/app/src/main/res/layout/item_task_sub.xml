@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/color_white"
+    android:gravity="center_vertical"
+    android:id="@+id/ll_item">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="标题"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="@color/color_333333"
+        android:layout_margin="@dimen/default_margin"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/tv_pass_str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="@color/color_888888"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cztg_more1"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="@dimen/default_margin_4"
+        android:layout_marginRight="@dimen/default_margin"/>
+
+</LinearLayout>

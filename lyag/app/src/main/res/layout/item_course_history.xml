@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="horizontal"
+    android:id="@+id/ll_item">
+
+    <ImageView
+        android:id="@+id/iv_refer"
+        android:layout_width="110dp"
+        android:layout_height="125dp"
+        android:layout_margin="@dimen/default_margin"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="合格的设计师应该掌握哪些专业知识合格的设计师应该掌握哪些专业知识"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold"
+            android:drawablePadding="@dimen/default_margin_4"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_6"
+            android:text="完成日期：2018-02-13 11:00"
+            android:textColor="@color/color_888888"
+            android:textSize="@dimen/text_size_12"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="已看90分钟/共120分钟"
+            android:textColor="@color/color_888888"
+            android:textSize="@dimen/text_size_12" />
+
+        <com.akexorcist.roundcornerprogressbar.TextRoundCornerProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_margin_6"
+            android:layout_marginBottom="@dimen/default_margin_4"
+            android:layout_marginTop="@dimen/default_margin_4"
+            app:rcBackgroundColor="@color/color_e5e5e5"
+            app:rcMax="100"
+            app:rcProgress="30"
+            app:rcProgressColor="@color/color_theme"
+            app:rcRadius="5dp"
+            app:rcReverse="false" />
+
+    </LinearLayout>
+</LinearLayout>

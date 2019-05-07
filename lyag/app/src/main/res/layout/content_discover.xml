@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_course"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <View style="@style/GreyDivider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/search_course"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:text="课程"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14"/>
+
+            <TextView
+                android:id="@+id/tv_course_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/default_margin"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:drawableRight="@drawable/search_more"
+                android:text="更多"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/text_size_13"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/GreyDivider"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_course"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </RelativeLayout>
+
+        <View
+            style="@style/GreyDivider"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_column"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <View style="@style/GreyDivider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/search_specialcolumn"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:text="专栏"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14"/>
+
+            <TextView
+                android:id="@+id/tv_column_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/default_margin"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:drawableRight="@drawable/search_more"
+                android:text="更多"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/text_size_13"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/GreyDivider"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_column"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/GreyDivider"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_live"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <View style="@style/GreyDivider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/search_live"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:text="直播"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14"/>
+
+            <TextView
+                android:id="@+id/tv_live_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/default_margin"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:drawableRight="@drawable/search_more"
+                android:text="更多"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/text_size_13"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/GreyDivider"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_live"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/GreyDivider"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_audio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <View style="@style/GreyDivider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/search_live"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:text="音频"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14"/>
+
+            <TextView
+                android:id="@+id/tv_audio_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/default_margin"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:drawableRight="@drawable/search_more"
+                android:text="更多"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/text_size_13"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/GreyDivider"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_audio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <View
+            style="@style/GreyDivider"/>
+    </LinearLayout>
+</LinearLayout>

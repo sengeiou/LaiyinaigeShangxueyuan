@@ -1,0 +1,2 @@
+include ':app', 'BaseLib', ':ninegridview',':pickerview',':IMKit',':IMLib',':VideoPlayModule-Lite', ':VideoUi',
+        ':VideoPlayModule',':okgo',':okserver'

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <include layout="@layout/layout_loading" />
+
+    <View
+        style="@style/GreyDivider"
+        android:layout_marginTop="@dimen/default_margin" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_ptr_recycler_view" />
+
+    </LinearLayout>
+
+
+    <View style="@style/GreyDivider"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/ll_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:drawableLeft="@drawable/cztg_carnet"
+            android:drawablePadding="@dimen/default_margin_8"
+            android:gravity="center"
+            android:text="开始通关"
+            android:textColor="@color/color_theme"
+            android:textSize="@dimen/text_size_15"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

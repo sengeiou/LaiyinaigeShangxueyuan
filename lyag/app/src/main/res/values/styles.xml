@@ -1,0 +1,108 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.AppStartLoadTranslucent" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- 头部标题样式 -->
+    <style name="ToolbarHeadTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="GreyDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/color_grey_divider</item>
+    </style>
+
+    <style name="GreyDivPortrait">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/color_grey_divider</item>
+    </style>
+
+    <!-- 通用输入框 -->
+    <style name="BaseTabLayout" parent="Widget.Design.TabLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/color_white</item>
+        <item name="tabTextColor">@color/color_333333</item>
+        <item name="tabIndicatorColor">@color/color_theme</item>
+        <item name="tabSelectedTextColor">@color/color_theme</item>
+        <item name="tabTextAppearance">@style/MyTabLayoutTextAppearance</item>
+    </style>
+
+    <!--修改tabLayout的字体大小-->
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+
+    <!--PopWindow 弹出动画效果 由底弹出-->
+    <style name="PopAnimationFade">
+        <item name="android:windowEnterAnimation">@anim/pop_in_bottomtoup</item>
+        <item name="android:windowExitAnimation">@anim/pop_out_uptobottom</item>
+    </style>
+
+    <!-- 通用搜索样式 -->
+    <style name="CommentEditTextSearch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/item_search_height</item>
+        <item name="android:background">@drawable/shape_item_white_radius</item>
+        <item name="android:drawableLeft">@drawable/search_searchicon</item>
+        <item name="android:drawablePadding">@dimen/default_margin_8</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/default_margin</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/color_333333</item>
+        <item name="android:textColorHint">@color/color_888888</item>
+        <item name="android:focusable">false</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <!-- 评论输入框 -->
+    <style name="CommentEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:imeOptions">actionSend</item>
+        <item name="android:padding">10dip</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/color_333333</item>
+        <item name="android:textColorHint">@color/color_888888</item>
+        <item name="android:background">@drawable/selector_common_comment_reply_et</item>
+    </style>
+
+    <style name="myRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar_course</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:maxHeight">48dp</item>
+    </style>
+
+    <style name="Dialog_Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@drawable/dialog_loading_bg</item>
+        <item name="android:radius">5dp</item>
+    </style>
+
+</resources>

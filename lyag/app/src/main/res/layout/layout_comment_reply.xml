@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_comment_reply"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_gravity="center_horizontal|bottom"
+    android:background="@color/color_white"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <View style="@style/GreyDivider"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginRight="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        >
+
+        <EditText
+            android:id="@+id/et_content"
+            style="@style/CommentEditText"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:imeOptions="actionSend"
+            android:maxLength="1000"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

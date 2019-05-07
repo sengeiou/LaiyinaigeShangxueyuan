@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.baselib.widget.CustomListView
+        android:id="@+id/lv_dry_cargo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/color_white"
+        android:dividerHeight="@dimen/default_divider_one"
+        android:scrollbars="none" />
+
+    <View style="@style/GreyDivider" />
+</LinearLayout>

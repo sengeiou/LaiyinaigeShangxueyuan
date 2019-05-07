@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <View
+        style="@style/GreyDivider"
+        android:layout_marginTop="@dimen/default_margin" />
+
+    <EditText
+        android:id="@+id/et_old_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:background="@color/color_white"
+        android:gravity="center_vertical"
+        android:hint="请输入当前密码"
+        android:inputType="textPassword"
+        android:paddingLeft="16dp"
+        android:textSize="@dimen/text_size_14" />
+
+    <View style="@style/GreyDivider" />
+
+    <EditText
+        android:id="@+id/et_new_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="@color/color_white"
+        android:gravity="center_vertical"
+        android:hint="新密码长度6—16位数字、字母和符号"
+        android:maxLength="16"
+        android:inputType="textPassword"
+        android:paddingLeft="16dp"
+        android:textSize="@dimen/text_size_14" />
+
+    <View
+        style="@style/GreyDivider"
+        android:layout_marginLeft="@dimen/default_margin" />
+
+    <EditText
+        android:id="@+id/et_pwd_again"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:background="@color/color_white"
+        android:gravity="center_vertical"
+        android:hint="请再次输入新密码"
+        android:inputType="textPassword"
+        android:paddingLeft="16dp"
+        android:textSize="@dimen/text_size_14"
+        android:maxLength="16"/>
+
+    <View style="@style/GreyDivider" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="144dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_item_theme_16"
+        android:text="确定"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/text_size_14" />
+</LinearLayout>

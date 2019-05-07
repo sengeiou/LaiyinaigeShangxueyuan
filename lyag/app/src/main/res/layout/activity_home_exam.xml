@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <include layout="@layout/layout_loading"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_margin_16"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin_16"
+            android:text="岗位：设计师"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/default_margin"
+            android:text="岗位成长树"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/default_margin_16"
+            android:scaleType="fitXY"
+            android:src="@drawable/cztg_tree" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/default_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/cztg_bx"
+                    android:drawablePadding="@dimen/default_margin_4"
+                    android:gravity="center_vertical"
+                    android:text="必修"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/cztg_xx"
+                    android:drawablePadding="@dimen/default_margin_4"
+                    android:gravity="center_vertical"
+                    android:text="必修"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_xx_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cb_xx_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cb_xx_1"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/tv_xx_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin_4"
+                    android:background="@drawable/shape_item_white_16"
+                    android:paddingBottom="@dimen/default_margin_4"
+                    android:paddingLeft="@dimen/default_margin_8"
+                    android:paddingRight="@dimen/default_margin_8"
+                    android:paddingTop="@dimen/default_margin_4"
+                    android:text="如何进行范围报价"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_xx_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true">
+
+                <CheckBox
+                    android:id="@+id/cb_xx_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cb_xx_2"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/tv_xx_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin_4"
+                    android:background="@drawable/shape_item_white_16"
+                    android:paddingBottom="@dimen/default_margin_4"
+                    android:paddingLeft="@dimen/default_margin_8"
+                    android:paddingRight="@dimen/default_margin_8"
+                    android:paddingTop="@dimen/default_margin_4"
+                    android:text="如何进行范围报价2"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_xx_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_alignParentRight="true">
+
+                <CheckBox
+                    android:id="@+id/cb_xx_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cb_xx_3"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/tv_xx_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin_4"
+                    android:background="@drawable/shape_item_white_16"
+                    android:paddingBottom="@dimen/default_margin_4"
+                    android:paddingLeft="@dimen/default_margin_8"
+                    android:paddingRight="@dimen/default_margin_8"
+                    android:paddingTop="@dimen/default_margin_4"
+                    android:text="如何进行报价3"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_xx_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cb_xx_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cb_xx_4"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/tv_xx_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin_4"
+                    android:background="@drawable/shape_item_white_16"
+                    android:paddingBottom="@dimen/default_margin_4"
+                    android:paddingLeft="@dimen/default_margin_8"
+                    android:paddingRight="@dimen/default_margin_8"
+                    android:paddingTop="@dimen/default_margin_4"
+                    android:text="如何进行报价4"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_xx_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true">
+
+                <CheckBox
+                    android:id="@+id/cb_xx_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cb_xx_5"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/tv_xx_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin_4"
+                    android:background="@drawable/shape_item_white_16"
+                    android:paddingBottom="@dimen/default_margin_4"
+                    android:paddingLeft="@dimen/default_margin_8"
+                    android:paddingRight="@dimen/default_margin_8"
+                    android:paddingTop="@dimen/default_margin_4"
+                    android:text="如何进行报价5"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+
+            </LinearLayout>
+
+            <!--底部必修课-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/relativeLayout">
+
+                <LinearLayout
+                    android:id="@+id/ll_bx_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/default_margin_8"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_bx_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cb_bx"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"/>
+
+                    <View
+                        android:layout_width="@dimen/header_height"
+                        android:layout_height="1dp"
+                        android:background="@color/color_fd9a9a" />
+
+                    <TextView
+                        android:id="@+id/tv_bx_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_item_bx"
+                        android:paddingBottom="@dimen/default_margin_6"
+                        android:paddingLeft="@dimen/default_margin_10"
+                        android:paddingRight="@dimen/default_margin_10"
+                        android:paddingTop="@dimen/default_margin_6"
+                        android:text="掌握设计外观1"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/text_size_14" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_bx_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/ll_bx_5"
+                    android:layout_marginBottom="@dimen/default_margin_8"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_bx_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_item_bx"
+                        android:paddingBottom="@dimen/default_margin_6"
+                        android:paddingLeft="@dimen/default_margin_10"
+                        android:paddingRight="@dimen/default_margin_10"
+                        android:paddingTop="@dimen/default_margin_6"
+                        android:text="掌握设计外观2"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <View
+                        android:layout_width="@dimen/header_height"
+                        android:layout_height="1dp"
+                        android:background="@color/color_fd9a9a" />
+
+                    <CheckBox
+                        android:id="@+id/cb_bx_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cb_bx"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_bx_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_bx_4"
+                    android:layout_marginBottom="@dimen/default_margin_8"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_bx_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cb_bx"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"/>
+
+                    <View
+                        android:layout_width="@dimen/header_height"
+                        android:layout_height="1dp"
+                        android:background="@color/color_fd9a9a" />
+
+                    <TextView
+                        android:id="@+id/tv_bx_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_item_bx"
+                        android:paddingBottom="@dimen/default_margin_6"
+                        android:paddingLeft="@dimen/default_margin_10"
+                        android:paddingRight="@dimen/default_margin_10"
+                        android:paddingTop="@dimen/default_margin_6"
+                        android:text="掌握设计外观3"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_bx_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/ll_bx_3"
+                    android:layout_marginBottom="@dimen/default_margin_8"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_bx_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_item_bx"
+                        android:paddingBottom="@dimen/default_margin_6"
+                        android:paddingLeft="@dimen/default_margin_10"
+                        android:paddingRight="@dimen/default_margin_10"
+                        android:paddingTop="@dimen/default_margin_6"
+                        android:text="掌握设计外观4"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <View
+                        android:layout_width="@dimen/header_height"
+                        android:layout_height="1dp"
+                        android:background="@color/color_fd9a9a" />
+
+                    <CheckBox
+                        android:id="@+id/cb_bx_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cb_bx"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_bx_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_bx_2"
+                    android:layout_marginBottom="@dimen/default_margin_32"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_bx_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cb_bx"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"/>
+
+                    <View
+                        android:layout_width="@dimen/header_height"
+                        android:layout_height="1dp"
+                        android:background="@color/color_fd9a9a" />
+
+                    <TextView
+                        android:id="@+id/tv_bx_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_item_bx"
+                        android:paddingBottom="@dimen/default_margin_6"
+                        android:paddingLeft="@dimen/default_margin_10"
+                        android:paddingRight="@dimen/default_margin_10"
+                        android:paddingTop="@dimen/default_margin_6"
+                        android:text="掌握设计外观5"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/text_size_14"
+                        />
+                </LinearLayout>
+
+            </RelativeLayout>
+            <!--底部必修课-->
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:background="@color/color_white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_record"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="成长通关记录"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14" />
+
+        <View
+            style="@style/GreyDivPortrait"
+            android:layout_marginBottom="@dimen/default_margin_8"
+            android:layout_marginTop="@dimen/default_margin_8" />
+
+        <TextView
+            android:id="@+id/tv_introduce"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="成长通关说明"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+
+</LinearLayout>

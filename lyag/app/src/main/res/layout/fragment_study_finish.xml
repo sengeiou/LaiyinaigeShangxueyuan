@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_bg">
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="28dp"
+        android:background="@drawable/shape_item_theme_white_16"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/default_margin">
+
+        <RadioButton
+            android:id="@+id/rb_post_major"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:background="@drawable/selector_study"
+            android:layout_margin="0.5dp"
+            android:text="岗位必修"
+            android:textColor="@drawable/text_button_selector_study"
+            android:textSize="@dimen/text_size_13"
+            android:gravity="center"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rb_leader_assign"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:background="@drawable/selector_study"
+            android:layout_margin="0.5dp"
+            android:layout_alignParentRight="true"
+            android:text="领导指派"
+            android:textColor="@drawable/text_button_selector_study"
+            android:textSize="@dimen/text_size_13"
+            android:gravity="center"
+            android:checked="false"/>
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"/>
+
+</LinearLayout>

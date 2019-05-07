@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register_bgp"
+    android:orientation="vertical"
+    android:id="@+id/ll_item">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/register_logo2"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="72dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="找回密码"
+        android:textSize="@dimen/text_size_16"
+        android:textColor="@color/color_white"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/default_margin_32"/>
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:background="@drawable/shape_item_theme_white_16"
+        android:layout_marginLeft="@dimen/login_item_margin"
+        android:layout_marginRight="@dimen/login_item_margin"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/register_user"
+        android:paddingLeft="@dimen/default_margin"
+        android:paddingRight="@dimen/default_margin"
+        android:drawablePadding="@dimen/default_margin_8"
+        android:hint="请输入手机号码"
+        android:textSize="@dimen/text_size_14"
+        android:inputType="phone"
+        android:layout_marginTop="@dimen/login_item_margin"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/login_item_margin"
+        android:layout_marginRight="@dimen/login_item_margin"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/et_code"
+            android:layout_width="0dp"
+            android:layout_weight="6.5"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/shape_item_theme_white_16"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/register_verification"
+            android:paddingLeft="@dimen/default_margin"
+            android:paddingRight="@dimen/default_margin"
+            android:drawablePadding="@dimen/default_margin_8"
+            android:hint="输入验证码"
+            android:textSize="@dimen/text_size_14"
+            android:inputType="textPassword"
+            android:layout_marginTop="@dimen/default_margin_16"
+            />
+
+
+        <Button
+            android:id="@+id/btn_get_code"
+            android:layout_width="0dp"
+            android:layout_weight="3.5"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/shape_item_theme_white_16"
+            android:gravity="center"
+            android:paddingLeft="@dimen/default_margin"
+            android:paddingRight="@dimen/default_margin"
+            android:drawablePadding="@dimen/default_margin_8"
+            android:textSize="@dimen/text_size_14"
+            android:layout_marginTop="@dimen/default_margin_16"
+            android:text="获取验证码"
+            android:textColor="@drawable/text_button_selector"
+            android:layout_marginLeft="@dimen/default_margin_8"
+            />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:background="@drawable/shape_item_theme_white_16"
+        android:layout_marginLeft="@dimen/login_item_margin"
+        android:layout_marginRight="@dimen/login_item_margin"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/register_lock"
+        android:paddingLeft="@dimen/default_margin"
+        android:paddingRight="@dimen/default_margin"
+        android:drawablePadding="@dimen/default_margin_8"
+        android:hint="输入新密码(6~16字符)"
+        android:textSize="@dimen/text_size_14"
+        android:inputType="textPassword"
+        android:layout_marginTop="@dimen/default_margin_16"
+        android:maxLength="16"
+        />
+
+    <EditText
+        android:id="@+id/et_password_again"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:background="@drawable/shape_item_theme_white_16"
+        android:layout_marginLeft="@dimen/login_item_margin"
+        android:layout_marginRight="@dimen/login_item_margin"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/register_lock"
+        android:paddingLeft="@dimen/default_margin"
+        android:paddingRight="@dimen/default_margin"
+        android:drawablePadding="@dimen/default_margin_8"
+        android:hint="确认密码"
+        android:textSize="@dimen/text_size_14"
+        android:inputType="textPassword"
+        android:layout_marginTop="@dimen/default_margin_16"
+        android:maxLength="16"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/login_item_margin"
+        android:layout_marginRight="@dimen/login_item_margin"
+        android:layout_marginTop="@dimen/login_item_margin">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_item_blue_15"
+            android:text="返回登录"
+            android:textColor="@color/color_white"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"/>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_item_theme_16"
+            android:text="确认"
+            android:textColor="@color/color_white"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

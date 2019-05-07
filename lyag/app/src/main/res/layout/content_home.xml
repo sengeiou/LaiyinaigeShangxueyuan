@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/layout_adv"
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_banners"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <com.jianzhong.lyag.widget.customview.MyViewPagerIndicator
+                android:id="@+id/vp_viewpagerindicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="12dp"
+                android:layout_marginRight="8dp"
+                android:gravity="right" />
+
+            <TextView
+                android:id="@+id/tv_adv"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/black_alpha"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="13dp"
+                android:text=""
+                android:textColor="@color/color_white"
+                android:textSize="14sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <View style="@style/GreyDivider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_good_class"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_good_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:drawableTop="@drawable/homepage_course"
+                android:gravity="center"
+                android:text="精品课程"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_special_column"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_special_column"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:drawableTop="@drawable/homepage_specialcolumn"
+                android:gravity="center"
+                android:text="专家专栏"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_direct_seeding"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_live"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:drawableTop="@drawable/homepage_live"
+                android:gravity="center"
+                android:text="直播"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_study_task"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_study_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:drawableTop="@drawable/homepage_study"
+                android:gravity="center"
+                android:text="学习任务"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_classify"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_classify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:drawableTop="@drawable/homepage_classify"
+                android:gravity="center"
+                android:text="分类"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_12" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View style="@style/GreyDivider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <View style="@style/GreyDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginRight="@dimen/default_margin"
+                android:src="@drawable/homepage_important" />
+
+            <com.jianzhong.lyag.widget.customview.TextSwitcherView
+                android:id="@+id/watertext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <View
+                style="@style/GreyDivPortrait"
+                android:layout_marginBottom="@dimen/default_margin_10"
+                android:layout_marginTop="@dimen/default_margin_10" />
+
+
+            <TextView
+                android:id="@+id/tv_important_info_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:gravity="right"
+                android:text="更多"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/text_home_size" />
+
+        </LinearLayout>
+
+        <View style="@style/GreyDivider" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_dry_cargo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin_16"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_dry_cargo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="每日干货"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_dry_cargo_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:drawableRight="@drawable/homepage_morenews"
+                android:text="更多"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/text_home_size" />
+        </LinearLayout>
+
+        <View style="@style/GreyDivider" />
+
+        <com.baselib.widget.CustomListView
+            android:id="@+id/lv_audio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/color_white"
+            android:dividerHeight="@dimen/default_divider_zero"
+            android:scrollbars="none" />
+
+        <View style="@style/GreyDivider" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_focus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin_16"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_focus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="每日推荐"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_focus_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:drawableRight="@drawable/homepage_change"
+                android:text="换一换"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/text_home_size" />
+        </LinearLayout>
+
+        <View style="@style/GreyDivider" />
+
+        <com.baselib.widget.CustomListView
+            android:id="@+id/lv_recommend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/color_grey_divider"
+            android:dividerHeight="@dimen/default_divider_one"
+            android:scrollbars="none"
+            android:visibility="gone" />
+
+        <com.baselib.widget.CustomListView
+            android:id="@+id/lv_foucs_colum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/color_grey_divider"
+            android:dividerHeight="@dimen/default_divider_one"
+            android:scrollbars="none"
+            android:visibility="gone" />
+
+        <View style="@style/GreyDivider" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_live_room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin_16"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_live_room"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="直播间"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_live_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:drawableRight="@drawable/homepage_morenews"
+                android:text="更多"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/text_home_size" />
+        </LinearLayout>
+
+        <View style="@style/GreyDivider" />
+
+        <com.baselib.widget.CustomListView
+            android:id="@+id/lv_direct_seeding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/color_grey_divider"
+            android:dividerHeight="@dimen/default_divider_one"
+            android:scrollbars="none" />
+
+        <View style="@style/GreyDivider" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_course"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin_16"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="精品课程"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_course_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:drawableRight="@drawable/homepage_change"
+                android:text="换一换"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/text_home_size"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_course_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:drawableRight="@drawable/homepage_morenews"
+                android:text="更多"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/text_home_size" />
+        </LinearLayout>
+
+        <View style="@style/GreyDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            android:orientation="vertical">
+
+            <View style="@style/GreyDivider" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tl_good"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                app:tabIndicatorColor="@color/colorPrimaryDark"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/black"
+                app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+                app:tabTextColor="@color/black" />
+
+            <View style="@style/GreyDivider" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_good"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_special"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin_16"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_special"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="专栏"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_special_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:drawableRight="@drawable/homepage_change"
+                android:text="换一换"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_home_size" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_special_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:drawablePadding="@dimen/default_margin_4"
+                android:drawableRight="@drawable/homepage_morenews"
+                android:text="更多专栏"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/text_home_size" />
+        </LinearLayout>
+
+        <View style="@style/GreyDivider" />
+
+        <com.baselib.widget.CustomListView
+            android:id="@+id/lv_special"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/color_grey_divider"
+            android:dividerHeight="@dimen/default_divider_one"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

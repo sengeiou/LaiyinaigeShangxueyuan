@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">莱茵艾格学院</string>
+
+    <string name="shouzhishanghua">手指上滑，取消发送</string>
+    <string name="normal">按住 说话</string>
+    <string  name="recording">松开 结束</string>
+    <string  name="want_to_cancle">松开手指，取消发送</string>
+    <string name="tooshort">录音时间过短</string>
+
+    <string name="btn_state_normal">按下 说话</string>
+    <string name="btn_state_recordinng">松手 发送</string>
+
+    <string name="dialog_recording">手指上滑 取消发送</string>
+    <string name="dialog_cancel">手指松开 取消发送</string>
+    <string name="dialog_too_short">录音时间过短!</string>
+
+    //阿里云直播推流
+    <string name="network_poor">网络差，请退出或者重连</string>
+    <string name="network_recovery">网络恢复</string>
+    <string name="reconnect_start">重连开始</string>
+    <string name="reconnect_fail">重连失败</string>
+    <string name="connect_fail">连接失败</string>
+    <string name="send_message">发送消息</string>
+    <string name="reconnect_success">重连成功</string>
+    <string name="senddata_timeout">发送数据超时</string>
+    <string name="restart_success">重启成功</string>
+
+    <string name="no_camera_permission">没有权限使用摄像头，请开启摄像头权限</string>
+    <string name="no_record_bluetooth_permission">没有权限使用蓝牙，请开启蓝牙权限</string>
+    <string name="no_record_audio_permission">没有权限使用录音，请开启录音权限</string>
+    <string name="no_read_phone_state_permission">没有读取用户数据的权限，请开启该权限</string>
+    <string name="no_write_external_storage_permission">没有文件写权限，请开启该权限</string>
+    <string name="no_read_external_storage_permission">没有文件读权限，请开启该权限</string>
+
+    <string name="max_bitrate">最大码率</string>
+    <string name="best_bitrate">最佳码率</string>
+    <string name="quit_live">长时间重连失败，已不适合直播，请退出</string>
+    <string name="network_message">当前网络状态极差，已无法正常流畅直播，确认要继续直播吗？</string>
+    <string name="camera_success">摄像头打开成功</string>
+    <string name="camera_fail">摄像头打开失败</string>
+    <string name="error_message">-22错误产生</string>
+    <string name="mute_off">静音关闭</string>
+    <string name="mute_on">静音开启</string>
+    <string name="mirror_off">镜像关闭</string>
+    <string name="mirror_on">镜像开启</string>
+    <string name="advance_setting">高级设置</string>
+    <string name="watermark_position">水印位置 (上右 1, 上左 2, 下右 3, 下左 4) :</string>
+    <string name="fps_hint">帧率必须是0~30之间</string>
+    <string name="watermard_url">水印图片路径:</string>
+    <string name="fps">帧率</string>
+    <string name="front_camera_mirror">前置摄像头镜像</string>
+    <string name="landscape">横屏</string>
+    <string name="portrait_normal">竖屏</string>
+    <string name="ready_push">准备直播</string>
+    <string name="rtmp_url">请输入rtmp服务器的地址</string>
+    <string name="beauty_level">美颜级别</string>
+    <string name="toggle_switch_flash_on">开启闪光灯</string>
+    <string name="toggle_switch_flash_off">关闭闪光灯</string>
+    <string name="app_camera">切换摄像头</string>
+    <string name="live_push">开始推流</string>
+    <string name="live_stop">结束推流</string>
+    <string name="toggle_switch_beauty_on">美颜开启</string>
+    <string name="toggle_switch_beauty_off">美颜关闭</string>
+    <string name="VIDEO_CAPTURE_FPS">视频采集帧率（实时帧率）:</string>
+    <string name="AUDIO_ENCODER_FPS">音频编码帧率（实时帧率）:</string>
+    <string name="VIDEO_ENCODER_FPS">视频编码帧率（实时帧率）:</string>
+    <string name="OUTPUT_BITRATE">输出码率（实时码率）:</string>
+    <string name="AV_OUTPUT_DIFF">当前输出流，audio pts与video pts的差值:</string>
+    <string name="AUDIO_OUTPUT_FPS">音频输出帧率（实时帧率）:</string>
+    <string name="VIDEO_OUTPUT_FPS">视频输出帧率（实时帧率）:</string>
+    <string name="STREAM_PUBLISH_TIME">推流发布耗时（推流开始到发布流成功耗时）:</string>
+    <string name="STREAM_SERVER_IP">推流服务器IP:</string>
+    <string name="VIDEO_DELAY_DURATION">视频延迟时长:</string>
+    <string name="AUDIO_DELAY_DURATION">音频延迟时长:</string>
+    <string name="VIDEO_CACHE_FRAME_CNT">缓冲队列视频帧数:</string>
+    <string name="AUDIO_CACHE_FRAME_CNT">缓冲队列音频帧数:</string>
+    <string name="VIDEO_CACHE_BYTE_SIZE">缓冲队列视频数据总数:</string>
+    <string name="AUDIO_CACHE_BYTE_SIZE">缓冲队列音频数据总数:</string>
+    <string name="VIDEO_FRAME_DISCARD_CNT">视频丢弃总帧数:</string>
+    <string name="AUDIO_FRAME_DISCARD_CNT">音频丢弃总帧数:</string>
+    <string name="CUR_VIDEO_BUEATY_DURATION">当前视频帧美颜耗时:</string>
+    <string name="CUR_VIDEO_ENCODER_DURATION">当前视频帧编码耗时:</string>
+    <string name="cur_video_encode_bitrate">当前视频编码码率:</string>
+    <string name="illegal_output_resolution">选择输出分辨率过大</string>
+    <string name="VIDEO_OUTPUT_FRAME_COUNT">获取视频流已发送帧数:</string>
+    <string name="VIDEO_DATA">视频流已发送数据量:</string>
+    <string name="VIDEO_BUFFER_COUNT">当前手机端缓存的视频帧总数:</string>
+    <string name="VIDEO_DROPPED_FRAMECOUNT">当前直播视频流丢帧总数:</string>
+    <string name="AUDIO_DATA">音频流已发送数据量:</string>
+
+    <string name="dialog_title">错误提示</string>
+    <string name="ok">确定</string>
+    <string name="reconnect">重连</string>
+</resources>

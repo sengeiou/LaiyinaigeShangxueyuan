@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_item_gray_white_16"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/default_margin_16"
+        android:text="直播信息"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_16"
+        android:layout_marginBottom="@dimen/default_margin_16"
+        />
+    <View
+        style="@style/GreyDivider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="你的rtmp地址："
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14"/>
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="@drawable/selector_common_comment_reply_et"
+            android:padding="@dimen/default_margin_6"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/color_333333"
+            android:inputType="text"
+            android:imeOptions="actionSend"
+            android:textIsSelectable="true"
+            />
+
+    </LinearLayout>
+
+    <View
+        style="@style/GreyDivider"/>
+
+    <TextView
+        android:id="@+id/tv_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开启手机直播"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="@color/color_bg_main"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/default_margin_10"
+        android:paddingBottom="@dimen/default_margin_10"/>
+
+    <View
+        style="@style/GreyDivider"/>
+
+    <TextView
+        android:id="@+id/tv_copy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="复制直播信息"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="@color/color_bg_main"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/default_margin_10"
+        android:paddingBottom="@dimen/default_margin_10"/>
+
+    <View
+        style="@style/GreyDivider"/>
+
+    <TextView
+        android:id="@+id/tv_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查看直播说明"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="@color/color_bg_main"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/default_margin_10"
+        android:paddingBottom="@dimen/default_margin_10"/>
+
+
+    <View
+        style="@style/GreyDivider"/>
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="@color/color_bg_main"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/default_margin_10"
+        android:paddingBottom="@dimen/default_margin_10"/>
+
+</LinearLayout>

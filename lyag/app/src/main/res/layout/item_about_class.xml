@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/color_white"
+    android:id="@+id/ll_item">
+
+    <ImageView
+        android:id="@+id/iv_about"
+        android:layout_width="110dp"
+        android:layout_height="125dp"
+        android:scaleType="centerCrop"
+        android:layout_margin="@dimen/default_margin"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="相关课程标题"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_identify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="职位身份"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_size_14"
+            android:layout_marginTop="@dimen/default_margin_6"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tv_duration_sec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总时长：00分钟"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/color_888888"
+            android:layout_marginTop="@dimen/default_margin_6"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+
+        <TextView
+            android:id="@+id/tv_study"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已有0人学习"
+            android:textColor="@color/color_888888"
+            android:textSize="@dimen/text_size_14"/>
+
+    </LinearLayout>
+
+</LinearLayout>

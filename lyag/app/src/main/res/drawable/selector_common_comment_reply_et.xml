@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 获得焦点时的背景图片 -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+
+            <!-- 实心 -->
+            <solid android:color="@color/color_bg" />
+            <!-- 描边 -->
+            <stroke android:width="0.5dp" android:color="@color/color_bdbdbd" />
+            <!-- 圆角 -->
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+
+    <!-- 触摸模式下时的背景图片 -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+
+            <!-- 实心 -->
+            <solid android:color="@color/color_bg" />
+            <!-- 描边 -->
+            <stroke android:width="0.5dp" android:color="@color/color_bdbdbd" />
+            <!-- 圆角 -->
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+
+    <!-- 已选择模式时的背景图片 -->
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+
+            <!-- 实心 -->
+            <solid android:color="@color/color_bg" />
+            <!-- 描边 -->
+            <stroke android:width="0.5dp" android:color="@color/color_bdbdbd" />
+            <!-- 圆角 -->
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+
+    <!-- 默认背景 -->
+    <item>
+        <shape android:shape="rectangle">
+
+            <!-- 实心 -->
+            <solid android:color="@color/color_bg" />
+            <!-- 描边 -->
+            <stroke android:width="0.5dp" android:color="@color/color_bdbdbd" />
+            <!-- 圆角 -->
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+
+</selector>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.jianzhong.lyag">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon_logo"
+        android:supportsRtl="true"
+        android:resizeableActivity="true"
+        android:theme="@style/AppTheme">
+
+        <!--适配全面屏手机-->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+
+        <activity
+            android:name=".WelcomeActivity"
+            android:theme="@style/Theme.AppStartLoadTranslucent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Bugly升级SDK配置开始  -->
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent"/>
+        <!-- Bugly升级SDK配置结束-->
+
+        <!--阿里云推送配置start-->
+        <meta-data
+            android:name="com.alibaba.app.appkey"
+            android:value="24875561"/> <!-- appKey正式:24850238 测试:24875561-->
+        <meta-data
+            android:name="com.alibaba.app.appsecret"
+            android:value="239e9cffc1e3f77009d81188a8dd833a"/> <!--appSecret正式:5803eb15bf7239acb7c123605ca5fbfe 测试:239e9cffc1e3f77009d81188a8dd833a -->
+
+
+        <!-- 消息接收监听器 （用户可自主扩展） -->
+        <receiver
+            android:name=".alipush.LyagMessageReceiver"
+            android:exported="true"> <!-- 为保证receiver安全，建议设置不可导出，如需对其他应用开放可通过android：permission进行限制 -->
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_OPENED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_REMOVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.taobao.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.push.RECEIVE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <!--阿里云推送配置end-->
+
+        <!-- 融云聊天室必备 否则使用拍照功能时，会崩溃 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.jianzhong.lyag.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/rc_file_path"/>
+        </provider>
+
+        <!--个人资料部分-->
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".CommonWebActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.user.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppStartLoadTranslucent"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+
+        <activity
+            android:name=".ui.user.ForgetPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppStartLoadTranslucent"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <activity
+            android:name=".ui.user.EditPersonInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+
+        <activity
+            android:name=".ui.user.SettingActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.user.RevisePwdActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--组织架构-->
+        <activity
+            android:name=".ui.organization.MemberSelectActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.organization.TagSelcectActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.organization.OrganizeSelectActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.organization.MemberByOrganizeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.organization.AssignStudyActivity"
+            android:screenOrientation="portrait"/>
+        <!--内容导航-->
+        <activity
+            android:name=".ui.navi.HomeNaviActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.navi.CommonSearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.navi.NaviResultActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.navi.SearchResultActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+
+        <!--学习通关-->
+        <activity
+            android:name=".ui.exam.HomeExamActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.exam.TaskSubActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.exam.TaskReferActiVity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.exam.ClearanceExamActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.exam.ColumnDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.exam.ClassDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.exam.ClassDeatailSingleActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.exam.CommentDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <activity
+            android:name=".ui.exam.DryCargoDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.exam.MemberConActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.exam.AudioPlayActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.exam.AudioPlaySingleActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.exam.StudyTaskActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.exam.TaskRecordActivity"
+            android:screenOrientation="portrait"/>
+        <!--重要通知-->
+        <activity
+            android:name=".ui.notice.NoticeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.notice.NoticeDetailActivity"
+            android:screenOrientation="portrait"/>
+        <!--观看历史-->
+        <activity
+            android:name=".ui.user.history.HistoryCourseActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.user.history.HistoryAudioActivity"
+            android:screenOrientation="portrait"/>
+        <!--收藏-->
+        <activity
+            android:name=".ui.user.collect.CollectActivity"
+            android:screenOrientation="portrait"/>
+        <!--直播-->
+        <activity
+            android:name=".ui.live.LiveDetailActivity"
+            android:configChanges="orientation|keyboard|locale|screenSize|layoutDirection"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.live.livepush.LiveCameraActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+
+        <!--互动-->
+        <activity
+            android:name=".ui.interact.AddHelpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <activity
+            android:name=".ui.interact.InteractActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.interact.ShareActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.interact.AddShareActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <activity
+            android:name=".ui.interact.HelpDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <activity
+            android:name=".ui.interact.EditHelpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <activity
+            android:name=".ui.interact.ShareDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <activity
+            android:name=".ui.interact.EditShareActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <activity
+            android:name=".ui.interact.RankActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.interact.CommentImgTxtActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <!--学习任务-->
+        <activity
+            android:name=".ui.user.task.AssignTaskActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.user.task.ReceiveTaskActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.user.studyrank.StudyRankActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.user.studyrank.CreditDetailActivity"
+            android:screenOrientation="portrait"/>
+        <!--我的缓存-->
+        <activity
+            android:name=".ui.user.cache.MyCahceActivty"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--我的消息-->
+        <activity
+            android:name=".ui.user.message.MessageActivity"
+            android:screenOrientation="portrait"/>
+        <!--通用页面-->
+        <activity
+            android:name=".ui.common.PreviewImageActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.common.TbsReaderViewActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.organization.MemberSearchActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

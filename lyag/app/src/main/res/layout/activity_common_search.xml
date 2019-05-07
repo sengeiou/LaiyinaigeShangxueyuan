@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_7B6DFF"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/default_margin_8"
+        android:paddingLeft="@dimen/default_margin"
+        android:paddingRight="@dimen/default_margin"
+        android:paddingTop="@dimen/default_margin_8">
+
+        <EditText
+            android:id="@+id/et_search"
+            style="@style/CommentEditTextSearch"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:hint="搜索导师、课程内容"
+            android:imeOptions="actionSearch" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:text="取消"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="大家都在搜"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tv_more_classify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/default_margin_4"
+            android:drawableRight="@drawable/search_more"
+            android:text="查看更多分类"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_size_14" />
+
+    </LinearLayout>
+
+    <View style="@style/GreyDivider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/color_white">
+
+        <com.jianzhong.lyag.flexboxlayout.TagFlowLayout
+            android:id="@+id/tag_FlowLayout"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginLeft ="@dimen/default_margin"
+            android:layout_marginRight ="@dimen/default_margin"
+            android:layout_marginTop ="@dimen/default_margin_8"
+            android:layout_marginBottom ="@dimen/default_margin_8"
+            android:background="@color/color_white"
+            />
+
+    </LinearLayout>
+
+    <View style="@style/GreyDivider" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="搜索历史"
+        android:textColor="@color/color_666666"
+        android:layout_margin="@dimen/default_margin"
+        />
+
+    <com.baselib.widget.CustomListView
+        android:id="@+id/lv_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:dividerHeight="@dimen/default_divider_one"
+        android:divider="@color/color_grey_divider"/>
+</LinearLayout>

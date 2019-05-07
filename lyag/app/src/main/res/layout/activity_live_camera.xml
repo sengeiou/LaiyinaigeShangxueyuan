@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+    <SurfaceView
+        android:id="@+id/camera_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/view_line"
+        style="@style/GreyDivider"/>
+    <LinearLayout
+        android:id="@+id/ll_live_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_item_live_black_16"
+        android:alpha="0.5"
+        android:layout_marginTop="@dimen/default_margin_20"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zb_livetime"
+            android:layout_margin="@dimen/default_margin"/>
+
+        <TextView
+            android:id="@+id/tv_live_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00:00"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/color_white"
+            android:layout_marginRight="@dimen/default_margin"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_online_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_item_live_black_16"
+        android:alpha="0.5"
+        android:layout_marginTop="@dimen/default_margin_8"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/ll_live_time">
+
+        <TextView
+            android:id="@+id/tv_online_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2136"
+            android:textColor="@color/color_ff9900"
+            android:textSize="@dimen/text_size_14"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin_8"
+            android:layout_marginBottom="@dimen/default_margin_8"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="人在看"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/color_white"
+            android:layout_marginRight="@dimen/default_margin"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/default_margin_20">
+
+        <ImageView
+            android:id="@+id/iv_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zb_camera"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zb_close"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="@dimen/default_margin_8"
+            android:layout_marginRight="@dimen/default_margin"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_live_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/zb_begin"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/app_name"
+        android:layout_centerInParent="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_advance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/advance_setting"
+            android:visibility="gone"/>
+
+        <ToggleButton
+            android:id="@+id/btn_mute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textOff="@string/mute_off"
+            android:textOn="@string/mute_on"
+            android:visibility="gone"/>
+
+        <ToggleButton
+            android:id="@+id/btn_mirrored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textOff="@string/mirror_off"
+            android:textOn="@string/mirror_on"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_setting"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:visibility="gone">
+
+        <include layout="@layout/performance_log" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_preferences"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ToggleButton
+            android:id="@+id/toggle_live_push"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textOff="@string/live_push"
+            android:textOn="@string/live_stop"
+            />
+
+        <ToggleButton
+            android:id="@+id/toggle_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textOff="@string/app_camera"
+            android:textOn="@string/app_camera" />
+
+        <ToggleButton
+            android:id="@+id/toggle_flash_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textOff="@string/toggle_switch_flash_on"
+            android:textOn="@string/toggle_switch_flash_off"
+            android:visibility="gone"/>
+
+        <ToggleButton
+            android:id="@+id/btn_switch_beauty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textOff="@string/toggle_switch_beauty_on"
+            android:textOn="@string/toggle_switch_beauty_off"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_head"
+        style="@style/GreyDivider"
+        android:layout_marginTop="@dimen/default_margin"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:padding="@dimen/default_margin">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="A"
+            android:textColor="@color/color_333333" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tv_title"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@+id/imageView"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="B"
+            android:textColor="@color/color_888888"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/tv_create_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tv_content"
+            android:layout_below="@+id/tv_content"
+            android:layout_marginTop="5dp"
+            android:text="C"
+            android:textColor="@color/color_888888"
+            android:textSize="@dimen/text_size_12" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/icon_message_more" />
+
+    </RelativeLayout>
+
+    <View style="@style/GreyDivider" />
+
+</LinearLayout>
